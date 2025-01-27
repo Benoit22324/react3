@@ -1,10 +1,13 @@
 import './App.css'
+import { Greeting } from './Components/Greeting'
+import { Listing } from './Components/Listing'
 
 function App() {
 
   return (
     <>
-      <h1>oof</h1>
+      <Greeting name={"John"} age={18} />
+      <Listing list={["Bon", "Jour"]} />
     </>
   )
 }
