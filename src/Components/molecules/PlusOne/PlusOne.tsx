@@ -1,4 +1,5 @@
 import { Button } from "@atoms/Button";
+import { useRecommendStore } from "@store/useRecommendStore";
 import { useState } from "react"
 
 type PlusOneProps = {
@@ -7,12 +8,18 @@ type PlusOneProps = {
 }
 
 export const PlusOne = ({ label, count }: PlusOneProps) => {
+    const { increment, decrement } = useRecommendStore()
     const [added, setAdded] = useState(false);
     const [counter, setCounter] = useState(count);
 
     const handleClick = () => {
-        if (added) setCounter(counter - 1);
-        else setCounter(counter + 1);
+        if (added) {
+            setCounter(counter - 1);
+            decrement();
+        } else {
+            setCounter(counter + 1);
+            increment();
+        }
 
         setAdded(!added);
     }
