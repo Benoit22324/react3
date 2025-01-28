@@ -27,7 +27,9 @@
       "@templates/*": ["Components/templates/*"],
       "@pages/*": ["Components/pages/*"],
 
-      "@store/*": ["store/*"]
+      "@store/*": ["store/*"],
+      "@api/*": ["api/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": ["src"],

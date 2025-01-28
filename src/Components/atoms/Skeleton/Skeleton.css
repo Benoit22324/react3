@@ -1,0 +1,20 @@
+.skeletonAtom {
+    background-color: #DEDEDE;
+    animation: skeleton-load 1.5s ease-in-out infinite;
+    opacity: 0.8;
+}
+
+@keyframes skeleton-load {
+    0% {
+        background-color: #DEDEDE;
+        opacity: 0.8;
+    }
+    50% {
+        background-color: #A9A9A9;
+        opacity: 0.6;
+    }
+    100% {
+        background-color: #DEDEDE;
+        opacity: 0.8;
+    }
+}
